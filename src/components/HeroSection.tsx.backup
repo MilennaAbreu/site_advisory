@@ -1,0 +1,71 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Clock, Zap } from "lucide-react";
+import heroImage from "@/assets/hero-bg.jpg";
+const HeroSection = () => {
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 z-0" style={{
+      backgroundImage: `url(${heroImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
+        <div className="absolute inset-0 gradient-hero opacity-90"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto animate-slide-up">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-2 mb-8">
+            <Zap className="w-4 h-4 text-accent" />
+            <span className="text-accent font-medium">Velocidade Extrema • Zero Enrolação</span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-hero text-foreground mb-6">
+            Abra sua empresa nos EUA em{" "}
+            <span className="text-accent animate-pulse-glow">poucos DIAS</span>,{" "}
+            não em meses
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-subheading text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">A maneira mais rápida e simples de iniciar, expandir e gerenciar seu negócio nos EUA: Contabilidade, Impostos e regularizações fiscais.</p>
+
+          {/* Speed Indicators */}
+          
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button variant="hero" size="xl" className="min-w-[280px] group">
+              ABRIR EMPRESA AGORA
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button variant="professional" size="lg" className="min-w-[240px]">
+              Ver como funciona
+            </Button>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-12 pt-8 border-t border-border/50">
+            <p className="text-muted-foreground text-sm mb-4">
+              Confiado por mais de 500+ empresários brasileiros
+            </p>
+            <div className="flex justify-center items-center gap-8 text-muted-foreground text-xs">
+              <span>✓ 100% Legal</span>
+              <span>✓ Suporte em Português</span>
+              <span>✓ Garantia de Velocidade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 border border-accent/20 rounded-full animate-float"></div>
+      <div className="absolute bottom-32 right-16 w-12 h-12 bg-accent/10 rounded-lg animate-float" style={{
+      animationDelay: '2s'
+    }}></div>
+      <div className="absolute top-1/3 right-8 w-6 h-6 bg-accent rounded-full animate-pulse"></div>
+    </section>;
+};
+export default HeroSection;
