@@ -19,6 +19,12 @@ export default defineConfig(({ mode }) => ({
         manualChunks: undefined,
       },
     },
+    outDir: 'dist',
+  },
+  preview: {
+    port: 4173,
+    host: true,
+    strictPort: true,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
