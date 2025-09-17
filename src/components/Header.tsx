@@ -41,28 +41,28 @@ const Header = () => {
           </nav>
 
           {/* CTAs */}
-          <div className="flex items-center space-x-4">
-            <div className="hidden sm:flex items-center gap-1.5 bg-muted/60 backdrop-blur rounded-full px-3 py-1.5 border border-border/50 transition-soft shadow-sm">
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <div className="flex items-center gap-1 bg-muted/60 backdrop-blur rounded-full px-2 py-1 sm:px-3 sm:py-1.5 border border-border/50 transition-soft shadow-sm">
               <div className="relative group">
-                <button aria-label="English" onClick={() => setLang("en")} className={`p-2 rounded-full hover:scale-105 transition-soft ${lang === 'en' ? 'ring-2 ring-accent/60' : ''}`}>
-                  <img src="https://flagcdn.com/w40/us.png" alt="English" className="h-5 w-7" />
+                <button aria-label="English" onClick={() => setLang("en")} className={`p-1.5 sm:p-2 rounded-full hover:scale-105 transition-soft ${lang === 'en' ? 'ring-2 ring-accent/60' : ''}`}>
+                  <img src="https://flagcdn.com/w40/us.png" alt="English" className="h-4 w-5 sm:h-5 sm:w-7" />
                 </button>
                 <span className="pointer-events-none absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-0.5 rounded bg-secondary text-secondary-foreground text-xs opacity-0 group-hover:opacity-100 transition-opacity">English</span>
               </div>
               <div className="relative group">
-                <button aria-label="Português" onClick={() => setLang("pt")} className={`p-2 rounded-full hover:scale-105 transition-soft ${lang === 'pt' ? 'ring-2 ring-accent/60' : ''}`}>
-                  <img src="https://flagcdn.com/w40/br.png" alt="Português" className="h-5 w-7" />
+                <button aria-label="Português" onClick={() => setLang("pt")} className={`p-1.5 sm:p-2 rounded-full hover:scale-105 transition-soft ${lang === 'pt' ? 'ring-2 ring-accent/60' : ''}`}>
+                  <img src="https://flagcdn.com/w40/br.png" alt="Português" className="h-4 w-5 sm:h-5 sm:w-7" />
                 </button>
                 <span className="pointer-events-none absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-0.5 rounded bg-secondary text-secondary-foreground text-xs opacity-0 group-hover:opacity-100 transition-opacity">Português</span>
               </div>
             </div>
             <a href="https://wa.me/17275547736" target="_blank" rel="noopener noreferrer">
-              <Button variant="cta" size="sm">
+              <Button variant="cta" size="sm" className="hidden sm:flex">
                 <MessageCircle className="w-4 h-4" />
-                WhatsApp
+                <span className="hidden sm:inline">WhatsApp</span>
               </Button>
             </a>
-            <Button variant="professional" size="sm" onClick={handleContactClick}>
+            <Button variant="professional" size="sm" onClick={handleContactClick} className="text-xs sm:text-sm">
               {lang === "en" ? "Contact Us" : "Fale Conosco"}
             </Button>
           </div>

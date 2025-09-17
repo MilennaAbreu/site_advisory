@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/hooks/use-i18n";
 const Footer = () => {
   const { lang } = useI18n();
-  return <footer className="bg-primary text-primary-foreground">
+  return <footer className="bg-muted/30 text-foreground">
       {/* CTA Section */}
       <div className="border-b border-border/20">
         <div className="container mx-auto px-4 py-16">
@@ -46,6 +46,11 @@ const Footer = () => {
                   <Linkedin className="w-5 h-5" />
                 </Button>
               </a>
+            </div>
+            
+            {/* IRS Badge */}
+            <div className="mb-6">
+              <img src="/img/IRS.png" alt="IRS Certified" className="h-16 w-auto opacity-80" />
             </div>
             
             {/* Speed Guarantee Badge */}
